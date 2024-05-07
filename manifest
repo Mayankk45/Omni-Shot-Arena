@@ -1,0 +1,21 @@
+##   Channel Details
+title= Omni Shot Arena Free
+major_version=1
+minor_version=0
+build_version=0
+
+mm_icon_focus_fhd=pkg:/images/channel image fhd.png
+mm_icon_focus_hd=pkg:/images/channel image hd.png
+mm_icon_focus_sd=pkg:/images/channel image sd.png
+
+splash_screen_fhd=pkg:/images/splash screen fhd.png
+splash_screen_hd=pkg:/images/splash screen hd.png
+splash_screen_sd=pkg:/images/splash screen sd.png
+
+splash_color=#000000
+splash_min_time=1
+
+# UI Resolution
+ui_resolutions=hd
+
+supports_input_launch=1

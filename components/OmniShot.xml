@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="OmniShotArena" extends="Scene">
+	<children>
+		 <!-- Audio -->
+        <Audio
+            id="backgroundMusic"/>
+
+        <!-- Sounds -->
+        <soundEffect
+            id="gameSounds"
+			volume = "100"/>
+
+		<!-- rowList group -->
+        <Group
+            id ="gamesRowScreen"
+            visible="true">
+			<Poster
+		    	id = "gamesHomeBackground"
+		    	width = "1280"
+		    	height = "720"
+				uri = "pkg:/images/Background.png"
+		    	loadDisplayMode = "scaleToFill"
+		    	translation = "[0,0]"/>
+			<Poster
+		    	id = "gamesFocusPoster"
+		    	width = "880"
+		    	height = "507"
+		    	loadDisplayMode = "scaleToFill"
+		    	translation = "[400,0]"/>
+			<Poster
+		    	id = "tudip_logo"
+		    	width = "154"
+		    	height = "120"
+                uri = "pkg:/images/Tudip_logo.png"
+		    	loadDisplayMode = "scaleToFill"
+		    	translation = "[5,0]"/>
+			<Label
+				id="gameTitleLabel"
+				width="400"
+				height="60"
+				color="#FFFFFF"
+				vertAlign="center"
+				inheritParentOpacity="false"
+				translation="[30,110]">
+				<Font
+					role="font"
+					uri="pkg:/fonts/Raleway-Black.ttf"
+					size="38" />
+			</Label>
+			<Label
+				id="gameDescriptionLabel"
+				width="600"
+                wrap="true"
+                color="#FFFFFF"
+                lineSpacing="1"
+                maxlines="5"
+				vertAlign="center"
+				inheritParentOpacity="false"
+				translation="[30,170]">
+				<Font
+					role="font"
+					uri="pkg:/fonts/rockwell-bold.ttf"
+					size="26" />
+			</Label>
+			<Poster
+				id="aboutButton"
+				width="118"
+				height="70"
+				uri="pkg:/images/about.png"
+				translation="[1140,16]"/>
+            <homeGamesRowScreen
+	            id="homeGamesRowScreen"
+		        visible="true"/>
+        </Group>
+
+		<!-- About Screen -->
+		<Group
+			id ="aboutgameStatsScreen"
+			visible="false">
+			<Rectangle
+				id="aboutgameStatsScreenRectangle"
+				width="1280"
+				height="720"
+				opacity="0.8"
+				color="#000000"
+				visible = "true"
+				translation="[0,0]">
+				<Poster
+					id = "aboutPopUp"
+					width = "872"
+					height = "720"
+					inheritParentOpacity="false"
+					uri = "pkg:/images/About Screen page.png"
+					translation = "[204,0]"/>
+				<Label
+					id = "privacyAndPolicy"
+					width = "1280"
+					height = "50"
+					inheritParentOpacity = "false"
+					horizAlign = "center"
+					vertAlign = "center"
+					translation = "[0,190]">
+					<Font
+						role="font"
+						uri="pkg:/fonts/Raleway-Black.ttf"
+						size="28" />
+				</Label>
+				<Label
+					id = "aboutUsText"
+					width = "1280"
+					height = "50"
+					inheritParentOpacity = "false"
+					horizAlign = "center"
+					vertAlign = "center"
+					translation = "[0,230]">
+					<Font
+						role="font"
+						uri="pkg:/fonts/Raleway-Black.ttf"
+						size="28" />
+				</Label>
+				<Label
+					id = "tudipQrText"
+					width = "280"
+					height = "50"
+					text = "To reach out:"
+					inheritParentOpacity = "false"
+					horizAlign = "center"
+					vertAlign = "center"
+					translation = "[325,273]">
+					<Font
+						role="font"
+						uri="pkg:/fonts/Raleway-Black.ttf"
+						size="22" />
+				</Label>
+				<Label
+					id = "entertainmentText"
+					text="For entertainment and fun related queries:"
+					width="350"
+					wrap="true"
+					lineSpacing="-7"
+					maxlines="2"
+					vertAlign="center"
+					horizAlign="center"
+					inheritParentOpacity="false"
+					translation = "[660,280]">
+					<Font
+						role="font"
+						uri="pkg:/fonts/Raleway-Black.ttf"
+						size="22" />
+				</Label>
+				<Poster
+					id = "tudipQRCode"
+					width = "130"
+					height = "187"
+					inheritParentOpacity="false"
+					uri = "pkg:/images/frame_tudip.png"
+					translation = "[400,340]"/>
+				<Poster
+					id = "entertainmentQRCode"
+					width = "130"
+					height = "187"
+					inheritParentOpacity="false"
+					uri = "pkg:/images/frame_tudipentertainment.png"
+					translation = "[770,340]"/>
+				<Label
+					id = "websiteText"
+					width = "800"
+					height = "50"
+					inheritParentOpacity = "false"
+					horizAlign = "center"
+					vertAlign = "center"
+					translation = "[238,330]">
+					<Font
+						role="font"
+						uri="pkg:/fonts/Raleway-Black.ttf"
+						size="28" />
+				</Label>
+				<Label
+					id = "gameVersion"
+					width = "1280"
+					height = "50"
+					inheritParentOpacity = "false"
+					horizAlign = "center"
+					vertAlign = "center"
+					translation = "[0,600]">
+					<Font
+						role="font"
+						uri="pkg:/fonts/rockwell-bold.ttf"
+						size="22" />
+				</Label>
+				<Label
+					id = "copyRightFirstText"
+					width = "280"
+					height = "50"
+					inheritParentOpacity = "false"
+					horizAlign = "center"
+					vertAlign = "center"
+					translation = "[304,625]">
+					<Font
+						role="font"
+						uri="pkg:/fonts/Raleway-Black.ttf"
+						size="28" />
+				</Label>
+				<Poster
+					id = "copyRightPoster"
+					width = "50"
+					height = "50"
+					inheritParentOpacity="false"
+					uri = "pkg:/images/CRIcon.png"
+					translation = "[515,625]"/>
+				<Label
+					id = "copyRightSecondText"
+					width = "400"
+					height = "50"
+					inheritParentOpacity = "false"
+					horizAlign = "center"
+					vertAlign = "center"
+					translation = "[555,625]">
+					<Font
+						role="font"
+						uri="pkg:/fonts/Raleway-Black.ttf"
+						size="28" />
+				</Label>
+			</Rectangle>
+		</Group>
+
+
+		<!-- home board group -->
+		<Group
+			id="homeBoard"
+			visible="false">
+			<Poster
+				id="homeBg"
+				height="720"
+				width="1280"
+				uri="pkg:/images/homeBg.png"
+				translation="[0,0]"/>
+		</Group>
+
+		<!-- game board group -->
+		<Group
+			id="gameBoard"
+			visible="false">
+
+			<Poster
+				id="gameBg"
+				height="720"
+				width="1280"
+				uri=""
+				translation="[0,0]">
+
+				<Poster
+					id="backButton"
+					height="71"
+					width="120"
+					uri=""
+					translation="[10,20]"/>
+
+				<Poster
+					id="scorePoster"
+					height="70"
+					width="150"
+					uri="pkg:/images/timerBg.png"
+					translation="[1117,20]">
+					<Label
+						id="scoreLabel"
+						height="70"
+						width="150"
+						text="Score : 0"
+						wrap = "true"
+						vertAlign = "center"
+						horizAlign="center"
+						translation="[0,0]"/>
+				</Poster>
+
+				<Poster
+					id="levelTimerPoster"
+					height="70"
+					width="120"
+					uri="pkg:/images/timerBg.png"
+					translation="[1150,630]">
+					<Label
+						id="levelTimerPosterLabel"
+						height="70"
+						width="120"
+						text="00:00"
+						horizAlign = "center"
+						vertAlign = "center"
+						translation="[0,0]"/>
+				</Poster>
+
+				<Label
+					id = "showPoints"
+					width = "150"
+					height = "20"
+					visible = "false"
+					color = "#00FF00"
+					font = "font:LargeBoldSystemFont"
+					translation = "[1160, 100]">
+				</Label>
+
+				<Poster
+					id="lifePoster"
+					height="70"
+					width="120"
+					uri="pkg:/images/timerBg.png"
+					translation="[980,20]">
+					<Label
+						id="lifeText"
+						height="70"
+						width = "120"
+						text="LIFE"
+						horizAlign="center"
+						vertAlign="center"
+						translation="[0,-10]"/>
+					<Label
+						id="lifeLabel"
+						height="70"
+						width = "120"
+						text=""
+						horizAlign="center"
+						vertAlign="center"
+						translation="[0,17]"/>
+				</Poster>
+
+				<Poster
+					id="levelPoster"
+					height="70"
+					width="120"
+					uri="pkg:/images/timerBG.png"
+					translation="[20,630]">
+					<Label
+						id="levelPosterLabel"
+						height="70"
+						width="120"
+						text="Level 1"
+						horizAlign = "center"
+						vertAlign = "center"
+						translation="[0,0]"/>
+				</Poster>
+			</Poster>
+
+			<Timer
+				id = "bulletMovingTimer"
+				duration = "0.001"
+				repeat = "true"/>
+
+			<Timer
+				id="cannonRotateTimer"
+				duration = "0.2"
+				repeat= "true"/>
+		</Group>
+
+		<Group
+			id="cannonPosterPage">
+			<Poster
+				id="cannonPoster"
+				height="150"
+				width="150"
+				uri=""
+				translation="[565,285]"/>
+		</Group>
+
+		<Group
+			id="popUpNextLevelPage"
+			visible ="false">
+			<Poster
+				id="popUpNextLevelPoster"
+				height="400"
+				width="600"
+				uri="pkg:/images/PopUp.png"
+				translation="[340,160]">
+				<Label
+					id="scoreNextLevelLabel"
+					height="400"
+					width="600"
+					color="#00FF00"
+					font="font:LargeBoldSystemFont"
+					text="Score : "
+					horizAlign="center"
+					translation="[0,135]"/>
+				<Label
+					id="levelCompleteLabel"
+					height="100"
+					width="600"
+					color="#00FF00"
+					font="font:LargeBoldSystemFont"
+					text="Level Complete"
+					translation="[200,60]"/>
+				<Poster
+					id="nextLevelPoster"
+					height="100"
+					width="100"
+					uri="pkg:/images/nextLevel.png"
+					translation="[160,240]"/>
+				<Poster
+					id="quitPoster"
+					height="100"
+					width="100"
+					opacity="0.5"
+					uri="pkg:/images/quit.png"
+					translation="[350,240]"/>
+			</Poster>
+		</Group>
+
+		<Group
+			id="gameOverPopUpPage"
+			visible ="false">
+			<Poster
+				id="popUpGameOverPoster"
+				height="400"
+				width="600"
+				uri="pkg:/images/PopUp.png"
+				translation="[340,160]">
+				<Label
+					id="scoreGameOverLabel"
+					height="400"
+					width="600"
+					color="#00FF00"
+					font="font:LargeBoldSystemFont"
+					text="Score : "
+					horizAlign="center"
+					translation="[0,135]"/>
+				<Label
+					id="GameOverLabel"
+					height="100"
+					width="600"
+					color="#00FF00"
+					font="font:LargeBoldSystemFont"
+					text="Game Over"
+					translation="[215,60]"/>
+				<Poster
+					id="playAgainPoster"
+					height="100"
+					width="100"
+					uri="pkg:/images/playAgain.png"
+					translation="[160,240]"/>
+				<Poster
+					id="quitPosterGameOver"
+					height="100"
+					width="100"
+					opacity="0.5"
+					uri="pkg:/images/quit.png"
+					translation="[350,240]"/>
+			</Poster>
+		</Group>
+
+
+		<Group
+			id="transparentScreenPage"
+			visible = "false">
+			<Poster
+				id="blackScreenBackground"
+				height="720"
+				width="1280"
+				opacity = "0.9"
+				uri="pkg:/images/blackScreenimg.jpg"
+				translation="[0,0]"/>
+		</Group>
+		<Label
+			id="DemoLabel"
+			visible="false"
+			text="1"
+			width="120"
+			translation="[20,20]"/>
+		<Label
+			id="DemoQuitLabel"
+			color="0x000000FF"
+			visible="false"
+			text="1"
+			width="120"
+			translation="[20,20]"/>
+
+		<!-- quit from entire game -->
+		<Group
+			id="QuitGame"
+			visible="false">
+			<Poster
+				id="QuitRect"
+				color="0x000000FF"
+				opacity="0.8"
+				width="580"
+				height="290"
+				uri = "pkg:/images/popUp.png"
+				translation="[350,204]" />
+
+			<Label
+				id="QuitMsg"
+				width="1280"
+				height="720" />
+
+			<Poster
+				id="QYes"
+				color="0x32CD32FF"
+				width="81"
+				height="50"
+				uri = "pkg:/images/yes.png"
+				translation="[500,375]" >
+			<Label
+				id="QYesLabel"
+				color="0x000000FF"
+				text=""
+				translation="[30,11]" />
+			</Poster>
+
+			<Poster
+				id="QNo"
+				color="0xDCDCDCFF"
+				width="81"
+				height="50"
+				uri = "pkg:/images/no.png"
+				translation="[695,375]" >
+				<Label
+					id="QNoLabel"
+					color="0x000000FF"
+					text=""
+					translation="[35,11]"/>
+			</Poster>
+		</Group>
+    </children>
+
+	<!-- BrightScript Portion -->
+	<script type="text/brightscript" uri="pkg:/components/OmniShot.brs"/>
+	<!-- End of BrightScript Portion -->
+
+	<interface>
+    <field id="homePageRowItemFocused" type="intarray" alias= "homeGamesRowScreen.rowItemFocused" onChange="onHomePageRowItemFocused"/>
+    <field id="homePageRowItemSelected" type="intarray" alias= "homeGamesRowScreen.rowItemSelected" onChange="onHomePageRowItemSelected"/>
+    </interface>
+
+    <!-- Adding BrightScript Code for rowList-->
+    <script type="text/brightscript" uri="pkg:/components/HomeRowList.brs"/>
+</component>

@@ -1,0 +1,38 @@
+<component name="homeGamesRowListItem" extends="Group">
+    <interface>
+        <!-- Set the field to dashboard screen row list operation -->
+        <field id="width" type="float"/>
+        <field id="height" type="float"/>
+        <field id="index" type="integer"/>
+        <field id="rowIndex" type="integer"/>
+        <field id="rowListHasFocus" type="boolean" onChange="listFocusChanged"/>
+        <field id="itemContent" type="node" onChange="itemContentChanged"/>
+        <field id="focusPercent" type="float" onChange="onFocusPercentChanged"/>
+        <field id="rowFocusPercent" type="float" onChange="onRowFocusPercentChanged"/>
+    </interface>
+
+    <!-- BrightScript Portion -->
+    <script type="text/brightscript" uri="pkg:/components/HomeRowListItems.brs"/>
+    <!-- End of BrightScript Portion -->
+    <children>
+        <!-- Set the renderable nodes to design the dashboard row list -->
+        <Rectangle
+            id = "homeGamesCardWhiteRectangle"
+            visible="true"
+            width = "254"
+            height = "191"
+            color= "#666666"
+            inheritparentopacity = "false"
+            translation = "[0,0]">
+        <Poster
+            id="homeGamesCardPoster"
+            width = "254"
+            height = "191"
+            loadwidth = "254"
+            loadheight = "191"
+            loadDisplayMode = "scaleToFit"
+            inheritparentopacity = "false"
+            translation = "[0,0]"/>
+        </Rectangle>
+    </children>
+</component>
